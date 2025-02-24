@@ -1,50 +1,110 @@
-# React + TypeScript + Vite
+# 🌿 Sortify - Smart Trash Classification Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 **Sortify** adalah aplikasi berbasis web yang membantu memilah sampah secara otomatis menggunakan AI. Ini adalah repository untuk frontend aplikasi yang dibangun dengan **React + TypeScript + Vite** dan didukung oleh **Tailwind CSS** untuk tampilan yang modern dan responsif. 🌍✨
 
-Currently, two official plugins are available:
+## 📥 Cara Clone & Menjalankan di Lokal
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer Anda.
 
-## Expanding the ESLint configuration
+### 🔹 1. Clone Repository
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Pastikan Anda sudah menginstall **Git**. Lalu jalankan perintah berikut:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```sh
+git clone https://github.com/neutrash-ai/sortify-frontend.git
+cd sortify-frontend
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 🔹 2. Install Dependencies
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Gunakan **npm**, **yarn**, atau **pnpm** untuk menginstall dependensi proyek.
+
+**Dengan npm:**
+
+```sh
+npm install
 ```
+
+**Atau dengan yarn:**
+
+```sh
+yarn install
+```
+
+**Atau dengan pnpm:**
+
+```sh
+pnpm install
+```
+
+---
+
+### 🔹 3. Jalankan Development Server
+
+Setelah semua dependensi terinstall, jalankan server pengembangan dengan:
+
+```sh
+npm run dev
+```
+
+Atau jika menggunakan **yarn**:
+
+```sh
+yarn dev
+```
+
+Atau jika menggunakan **pnpm**:
+
+```sh
+pnpm dev
+```
+
+🚀 **Server akan berjalan di `http://localhost:5173/` secara default.** Buka browser dan lihat aplikasi berjalan! 🎉
+
+---
+
+## 📌 Struktur Proyek
+
+```
+📦 sortify-frontend
+├── 📂 public/        # File statis (favicon, manifest, dll)
+├── 📂 src/           # Kode utama aplikasi
+│   ├── 📂 assets/    # Gambar & ikon yang diimpor langsung
+│   ├── 📂 components/ # Komponen UI yang dapat digunakan kembali
+│   ├── 📂 pages/     # Halaman utama aplikasi
+│   ├── 📜 App.tsx    # Komponen utama aplikasi
+│   ├── 📜 main.tsx   # Entry point aplikasi
+│   ├── 📜 index.css  # File Tailwind CSS utama
+│   ├── 📂 hooks/     # Custom hooks (jika ada)
+│   ├── 📂 utils/     # Helper functions (jika ada)
+├── 📜 package.json   # Dependensi proyek
+├── 📜 tailwind.config.js # Konfigurasi Tailwind CSS
+├── 📜 vite.config.ts  # Konfigurasi Vite
+└── 📜 .gitignore     # File & folder yang tidak di-push ke GitHub
+```
+
+## ❓ FAQ
+
+❓ **Apa yang harus saya lakukan jika terjadi error saat menjalankan `npm install`?**  
+✅ Pastikan Anda menggunakan **Node.js versi terbaru**. Cek dengan:
+
+```sh
+node -v
+```
+
+Jika belum terinstall, unduh dari [Node.js official website](https://nodejs.org/).
+
+❓ **Bagaimana jika port 5173 sudah digunakan?**  
+✅ Jalankan Vite di port lain dengan:
+
+```sh
+npm run dev -- --port=3000
+```
+
+---
+
+## 🚀 Selamat Coding!
+
+Sekarang Anda siap untuk mulai mengembangkan **Sortify**! Jika ada pertanyaan atau kendala, jangan ragu untuk membuka **issue** di repository ini. 🌱✨
