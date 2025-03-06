@@ -1,0 +1,46 @@
+name: Frontend CI
+
+# Menjalankan workflow ketika ada push atau pull request ke branch main
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout kode dari repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Setup Node.js
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.16 # Atau versi lain yang diinginkan
+
+      # 3. Cache node_modules untuk mempercepat build
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-cache-
+
+      # 4. Install dependensi
+      - name: Install dependencies
+        run: npm install
+
+      # 5. Lint code (opsional)
+      - name: Lint code
+        run: npm run lint
+
+      # 6. Build project
+      - name: Build for production
+        run: npm run build
