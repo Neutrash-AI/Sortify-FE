@@ -300,27 +300,37 @@ function App() {
             data-state="On"
             className="w-[149px] h-[24.66px] pl-[15px] left-0 top-0 absolute inline-flex justify-start items-center"
           >
-            <div className="w-11 h-6 relative bg-[#4caf50] rounded-full overflow-hidden">
-              <div className="w-5 h-5 left-[22px] top-[2px] absolute bg-white rounded-full" />
-            </div>
-            <div className="pl-2 inline-flex flex-col justify-start items-start gap-2.5">
-              <div className="inline-flex justify-center items-center gap-2.5">
-                <div className="relative justify-start text-zinc-950 text-sm font-medium font-['Inter']">
-                  Connected
-                </div>
-              </div>
-            </div>
+            <Switch
+              onChange={setIsConnected}
+              checked={isConnected}
+              onColor="#4caf50"
+              offColor="#ccc"
+              uncheckedIcon={false}
+              checkedIcon={false}
+            />
+            <span className="text-sm font-medium font-['Inter'] text-black dark:text-white">
+              {isConnected ? "Connected" : "Disconnected"}
+            </span>
           </div>
           <div
             data-state="On"
             className="w-12 h-[26px] left-[258px] top-[-0.82px] absolute inline-flex justify-start items-center"
           >
-            <div className="w-11 h-6 relative bg-[#4caf50] rounded-full overflow-hidden">
-              <div className="w-5 h-5 left-[22px] top-[2px] absolute bg-white rounded-full" />
-            </div>
-          </div>
-          <div className="w-[35px] h-[35px] left-[313px] top-[-5.82px] absolute">
-            <div className="w-[35px] h-[35px] left-0 top-0 absolute bg-black border-black" />
+            <Switch
+              onChange={setIsDarkMode}
+              checked={isDarkMode}
+              onColor="#4caf50"
+              offColor="#ccc"
+              uncheckedIcon={false}
+              checkedIcon={false}
+            />
+            <span className="text-sm font-medium text-black dark:text-white">
+              {isDarkMode ? (
+                <MdOutlineDarkMode className="w-[35px] h-[35px]" />
+              ) : (
+                <MdOutlineLightMode className="w-[35px] h-[35px]" />
+              )}
+            </span>
           </div>
         </div>
         <div className="self-stretch h-[296px] px-3 inline-flex justify-start items-start overflow-hidden">
