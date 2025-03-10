@@ -20,19 +20,27 @@ function App() {
   }, [isDarkMode]);
 
   return (
-    <main className="lg:min-h-screen min-h-[100vmax] relative w-screen flex flex-col items-center justify-center bg-[#f7f6f9] dark:bg-[#15003f] overflow-hidden">
+    <main className="w-screen md:w-[820px] lg:w-screen lg:min-h-screen min-h-[100vmax] relative flex flex-col items-center justify-center bg-[#f7f6f9] dark:bg-[#15003f] lg:overflow-hidden md:overflow-y-scroll">
       {/* Live Camera */}
-      <div className="w-[520px] h-[596px] absolute left-[199px] top-[232px] rounded-md border border-[#e6e6e6] inline-flex justify-start items-start overflow-hidden">
+      <div
+        className="rounded-md border border-[#e6e6e6] inline-flex justify-start items-start overflow-hidden
+                      lg:w-[520px] lg:h-[596px] lg:absolute lg:left-[199px] lg:top-[232px]
+                      md:w-[520px] md:h-[458px] md:absolute md:left-[219px] md:top-[149px]"
+      >
         <div className="flex-1 self-stretch relative bg-white dark:bg-[#1f0059]">
-          <div className="absolute left-[160px] top-[276px] text-black dark:text-white text-4xl font-medium font-['Roboto'] leading-snug">
+          <div className="absolute left-[160px] lg:top-[276px] md:top-[218px] text-black dark:text-white text-4xl font-medium font-['Roboto'] leading-snug">
             Live Camera
           </div>
         </div>
       </div>
 
       {/* Total Waste */}
-      <div className="w-[1100px] absolute left-[783px] top-[232px] inline-flex flex-col justify-center items-center gap-10">
-        <div className="w-full inline-flex justify-start items-start gap-5">
+      <div
+        className="inline-flex flex-col justify-center items-center gap-10
+                      lg:w-[1100px] lg:absolute lg:left-[783px] lg:top-[232px]
+                      md:w-[520px] md:absolute md:left-[219px] md:top-[650px]"
+      >
+        <div className="w-full lg:inline-flex lg:justify-start lg:items-start lg:gap-5 md:grid md:grid-cols-3 md:gap-5">
           {["Total Waste", "Plastic", "Paper", "Metal", "Glass", "Other"].map(
             (label, idx) => (
               <div
@@ -48,19 +56,15 @@ function App() {
               </div>
             )
           )}
-          <div className="flex-1 p-4 bg-white dark:bg-transparent rounded-md border border-black/10 dark:border-white inline-flex flex-col justify-start items-start gap-1 overflow-hidden">
-            <div className="w-full text-black/75 dark:text-[#e0e0e1] text-base font-normal font-['Roboto'] leading-normal">
-              Total Waste
-            </div>
-            <div className="relative text-black dark:text-white text-[28px] font-medium font-['Roboto'] leading-9">
-              5
-            </div>
-          </div>
         </div>
       </div>
 
       {/* Waste Composition */}
-      <div className="w-[493px] h-[440px] absolute left-[783px] top-[388px] inline-flex flex-col justify-start items-start gap-1">
+      <div
+        className="hidden md:hidden lg:inline-flex
+                      lg:w-[493px] lg:h-[440px] lg:absolute lg:left-[783px] lg:top-[388px]
+                      flex-col justify-start items-start gap-1"
+      >
         <div className="w-full flex-1 p-5 bg-white dark:bg-transparent rounded-md border border-black/10 dark:border-[#d9d9d9] flex flex-col justify-start items-start gap-3">
           <div className="w-full text-black dark:text-white text-xl font-medium font-['Roboto'] leading-7">
             Waste Composition
@@ -80,7 +84,11 @@ function App() {
       </div>
 
       {/* Recyclable & Non-Recyclable Section */}
-      <div className="w-[520px] absolute left-[1333px] top-[388px] inline-flex flex-col justify-center items-center gap-10">
+      <div
+        className="inline-flex flex-col justify-center items-center gap-10
+                      lg:w-[520px] lg:absolute lg:left-[1333px] lg:top-[388px]
+                      md:w-[520px] md:absolute md:left-[209px] md:top-[900px]"
+      >
         <div className="w-full inline-flex justify-start items-center gap-10">
           {/* Recyclable Waste */}
           <div className="flex-1 py-3 inline-flex flex-col justify-center items-center gap-5">
@@ -114,11 +122,34 @@ function App() {
       </div>
 
       {/* Navbar */}
-      <div className="w-[1920px] h-[58px] p-5 absolute left-0 top-0 bg-[#4caf50] dark:bg-[#0a0024] shadow-[0px_0px_6px_0px_rgba(0,0,0,0.12)] inline-flex justify-center items-center gap-5 overflow-hidden">
-        <div className="w-[22px] h-6 relative overflow-hidden">
-          <div className="w-[15px] h-0 absolute left-[3px] top-[6px] ring-2 ring-white dark:ring-[#e0e0e0]" />
-          <div className="w-[15px] h-0 absolute left-[3px] top-[12px] ring-2 ring-white dark:ring-[#e0e0e0]" />
-          <div className="w-[15px] h-0 absolute left-[3px] top-[18px] ring-2 ring-white dark:ring-[#e0e0e0]" />
+      <div
+        className="p-5 absolute left-0 top-0 shadow-[0px_0px_6px_0px_rgba(0,0,0,0.12)] inline-flex justify-center items-center gap-5 overflow-hidden
+                      lg:w-[1920px] lg:h-[58px] lg:bg-[#4caf50] lg:dark:bg-[#0a0024]
+                      md:w-[820px] md:h-[58px] md:bg-[#4caf50]"
+      >
+        <div
+          className="relative overflow-hidden
+                        lg:w-[22px] lg:h-6
+                        md:w-[22px] md:h-6"
+        >
+          <div
+            className="absolute left-[3px] 
+                          lg:top-[6px] md:top-[6px] 
+                          lg:w-[15px] lg:h-0 lg:ring-2 lg:ring-white
+                          md:w-[15px] md:h-0 md:ring-2 md:ring-white"
+          />
+          <div
+            className="absolute left-[3px] 
+                          lg:top-[12px] md:top-[12px]
+                          lg:w-[15px] lg:h-0 lg:ring-2 lg:ring-white
+                          md:w-[15px] md:h-0 md:ring-2 md:ring-white"
+          />
+          <div
+            className="absolute left-[3px] 
+                          lg:top-[18px] md:top-[18px]
+                          lg:w-[15px] lg:h-0 lg:ring-2 lg:ring-white
+                          md:w-[15px] md:h-0 md:ring-2 md:ring-white"
+          />
         </div>
         <div className="flex-1 relative text-white text-[28px] font-medium font-['Roboto'] leading-9">
           Sortify - Smart Bin
@@ -126,7 +157,11 @@ function App() {
       </div>
 
       {/* Toggle - Connection */}
-      <div className="absolute left-[199px] top-[83px] inline-flex items-center gap-2">
+      <div
+        className="inline-flex items-center gap-2
+                      lg:absolute lg:left-[199px] lg:top-[83px]
+                      md:absolute md:left-[219px] md:top-[83px]"
+      >
         <Switch
           onChange={setIsConnected}
           checked={isConnected}
@@ -141,7 +176,11 @@ function App() {
       </div>
 
       {/* Toggle - Dark / Light Mode */}
-      <div className="absolute left-[1783px] top-[83px] inline-flex items-center gap-2">
+      <div
+        className="inline-flex items-center gap-2
+                      lg:absolute lg:left-[1783px] lg:top-[83px]
+                      md:absolute md:left-[633px] md:top-[83px]"
+      >
         <Switch
           onChange={setIsDarkMode}
           checked={isDarkMode}
@@ -159,15 +198,36 @@ function App() {
         </span>
       </div>
 
+      {/* Tambahan Icon untuk md */}
+      <div className="md:absolute md:left-[698px] md:top-[78px] md:inline-block lg:hidden">
+        {isDarkMode ? (
+          <MdOutlineDarkMode className="w-[35px] h-[35px]" />
+        ) : (
+          <MdOutlineLightMode className="w-[35px] h-[35px]" />
+        )}
+      </div>
+
       {/* Sidebar */}
-      <div className="w-[159px] h-[1022px] py-3 absolute left-0 top-[58px] bg-white dark:bg-[#1f0059] inline-flex flex-col justify-start items-center overflow-hidden">
+      <div
+        className="py-3 absolute left-0 top-[58px] inline-flex flex-col justify-start items-center overflow-hidden
+                      lg:w-[159px] lg:h-[1022px] lg:bg-white lg:dark:bg-[#1f0059]
+                      md:w-[159px] md:h-[1122px] md:bg-white"
+      >
         <div className="w-full px-5 py-4 inline-flex justify-center items-center gap-3">
-          <div className="w-5 h-5 relative bg-black/5 dark:bg-[#0a0024]/50 rounded-xl">
+          <div
+            className="relative rounded-xl
+                          lg:w-5 lg:h-5 lg:bg-black/5 lg:dark:bg-[#0a0024]/50
+                          md:w-5 md:h-5 md:bg-black/5"
+          >
             <div className="absolute left-[-2px] top-[-2px] w-6 h-6 flex items-center justify-center text-center text-black dark:text-white text-[15px] font-bold font-['Roboto']">
               📷
             </div>
           </div>
-          <div className="flex-1 text-[#212121] dark:text-[#e0e0e0] text-base font-medium font-['Roboto'] leading-tight">
+          <div
+            className="flex-1 text-base font-medium font-['Roboto'] leading-tight
+                          lg:text-[#212121] lg:dark:text-[#e0e0e0]
+                          md:text-[#212121]"
+          >
             Camera 1
           </div>
         </div>
