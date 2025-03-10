@@ -63,11 +63,11 @@ function App() {
                   key={idx}
                   className="
                     flex-1 p-4 bg-white dark:bg-transparent rounded-md border
-                    border-black/10 dark:border-white inline-flex flex-col
+                    border-black dark:border-white inline-flex flex-col
                     justify-start items-start gap-1 overflow-hidden
                   "
                 >
-                  <div className="w-full text-black/75 dark:text-[#e0e0e1] text-base font-normal font-['Roboto'] leading-normal">
+                  <div className="w-full text-black dark:text-[#e0e0e1] text-base font-normal font-['Roboto'] leading-normal">
                     {label}
                   </div>
                   <div className="relative text-black dark:text-white text-[28px] font-medium font-['Roboto'] leading-9">
@@ -87,19 +87,19 @@ function App() {
             flex-col justify-start items-start gap-1
           "
         >
-          <div className="w-full flex-1 p-5 bg-white dark:bg-transparent rounded-md border border-black/10 dark:border-[#d9d9d9] flex flex-col justify-start items-start gap-3">
+          <div className="w-full flex-1 p-5 bg-white dark:bg-transparent rounded-md border border-black dark:border-[#d9d9d9] flex flex-col justify-start items-start gap-3">
             <div className="w-full text-black dark:text-white text-xl font-medium font-['Roboto'] leading-7">
               Waste Composition
             </div>
-            <div className="w-full text-black/75 dark:text-[#e0e0e1] text-base font-normal font-['Roboto'] leading-normal">
+            <div className="w-full text-black dark:text-[#e0e0e1] text-base font-normal font-['Roboto'] leading-normal">
               Percentage
             </div>
             <div className="w-full flex-1 relative">
-              <div className="w-[280px] h-[280px] absolute left-[87px] top-[4px] bg-black/10 dark:bg-[#d9d9d9] rounded-full" />
-              <div className="w-[280px] h-[280px] absolute left-[87px] top-[4px] bg-black/10 dark:bg-white rounded-full" />
+              <div className="w-[280px] h-[280px] absolute left-[87px] top-[4px] bg-black dark:bg-[#d9d9d9] rounded-full" />
+              <div className="w-[280px] h-[280px] absolute left-[87px] top-[4px] bg-black dark:bg-white rounded-full" />
               <div className="w-[280px] h-[280px] absolute left-[87px] top-[4px] bg-black/50 rounded-full" />
             </div>
-            <div className="w-full text-right text-black/75 dark:text-[#e0e0e1] text-base font-normal font-['Roboto'] leading-normal">
+            <div className="w-full text-right text-black dark:text-[#e0e0e1] text-base font-normal font-['Roboto'] leading-normal">
               Types of Waste
             </div>
           </div>
@@ -282,8 +282,8 @@ function App() {
       {/*
         Layout Mobile (di bawah md)
       */}
-      <div className="md:hidden w-[360px] h-[922px] pb-3 bg-[#f7f6f9] inline-flex flex-col justify-center items-start gap-3">
-        <div className="self-stretch bg-[#4caf50] shadow-[0px_0px_6px_0px_rgba(0,0,0,0.12)] flex flex-col justify-start items-start">
+      <div className="md:hidden w-[360px] h-[922px] pb-3 dark:bg-[#15003f] bg-[#f7f6f9] inline-flex flex-col justify-center items-start gap-3">
+        <div className="self-stretch dark:bg-[#0a0024] bg-[#4caf50] shadow-[0px_0px_6px_0px_rgba(0,0,0,0.12)] flex flex-col justify-start items-start">
           <div className="self-stretch pl-4 pr-2 py-3 inline-flex justify-start items-center gap-2">
             <div className="w-[22px] h-6 relative overflow-hidden">
               <div className="w-[15px] h-0 left-[3px] top-[6px] absolute ring-2 ring-white" />
@@ -334,8 +334,8 @@ function App() {
           </div>
         </div>
         <div className="self-stretch h-[296px] px-3 inline-flex justify-start items-start overflow-hidden">
-          <div className="flex-1 self-stretch relative bg-white rounded-md border border-[#e6e6e6]">
-            <div className="w-[304px] h-4 left-[16px] top-[140px] absolute text-center justify-center text-black text-base font-normal font-['Roboto'] leading-snug">
+          <div className="flex-1 self-stretch relative dark:bg-[#1f0059] bg-white rounded-md border border-[#e6e6e6] dark:border-transparent">
+            <div className="w-[304px] h-4 left-[16px] top-[140px] absolute text-center justify-center dark:text-white text-black text-base font-normal font-['Roboto'] leading-snug">
               Live Camera
             </div>
           </div>
@@ -343,64 +343,64 @@ function App() {
         <div className="self-stretch px-3 flex flex-col justify-center items-center gap-2 overflow-hidden">
           <div className="self-stretch pt-4 inline-flex justify-start items-center gap-3">
             <div className="flex-1 inline-flex flex-col justify-start items-start">
-              <div className="self-stretch relative justify-start text-black text-lg font-medium font-['Roboto'] leading-normal">
+              <div className="self-stretch relative justify-start dark:text-white text-black text-lg font-medium font-['Roboto'] leading-normal">
                 Waste Overview
               </div>
-              <div className="self-stretch relative justify-start text-black/75 text-xs font-normal font-['Roboto'] leading-none">
+              <div className="self-stretch relative justify-start dark:text-[#e0e0e1] text-black text-xs font-normal font-['Roboto'] leading-none">
                 Total Waste in Bin
               </div>
             </div>
           </div>
           <div className="self-stretch inline-flex justify-start items-start gap-2">
-            <div className="flex-1 p-3 bg-white rounded-md border border-black/10 inline-flex flex-col justify-start items-start gap-1 overflow-hidden">
-              <div className="self-stretch relative justify-start text-black/75 text-sm font-normal font-['Roboto'] leading-tight">
+            <div className="flex-1 p-3 bg-white dark:bg-transparent rounded-md border dark:border-white border-black inline-flex flex-col justify-start items-start gap-1 overflow-hidden">
+              <div className="self-stretch relative justify-start dark:text-[#e0e0e1] text-black text-sm font-normal font-['Roboto'] leading-tight">
                 Total Waste
               </div>
-              <div className="relative justify-start text-black text-xl font-bold font-['Roboto'] leading-7">
+              <div className="relative justify-start dark:text-white text-black text-xl font-bold font-['Roboto'] leading-7">
                 5
               </div>
             </div>
-            <div className="flex-1 p-3 bg-white rounded-md border border-black/10 inline-flex flex-col justify-start items-start gap-1 overflow-hidden">
-              <div className="self-stretch relative justify-start text-black/75 text-sm font-normal font-['Roboto'] leading-tight">
+            <div className="flex-1 p-3 dark:bg-transparent bg-white rounded-md border dark:border-white border-black inline-flex flex-col justify-start items-start gap-1 overflow-hidden">
+              <div className="self-stretch relative justify-start dark:text-[#e0e0e1] text-black text-sm font-normal font-['Roboto'] leading-tight">
                 Plastic
               </div>
-              <div className="relative justify-start text-black text-xl font-bold font-['Roboto'] leading-7">
+              <div className="relative justify-start dark:text-white text-black text-xl font-bold font-['Roboto'] leading-7">
                 1
               </div>
             </div>
           </div>
           <div className="self-stretch inline-flex justify-start items-start gap-2">
-            <div className="flex-1 p-3 bg-white rounded-md border border-black/10 inline-flex flex-col justify-start items-start gap-1 overflow-hidden">
-              <div className="self-stretch relative justify-start text-black/75 text-sm font-normal font-['Roboto'] leading-tight">
+            <div className="flex-1 p-3 dark:bg-transparent bg-white rounded-md border dark:border-white border-black inline-flex flex-col justify-start items-start gap-1 overflow-hidden">
+              <div className="self-stretch relative justify-start dark:text-[#e0e0e1] text-black text-sm font-normal font-['Roboto'] leading-tight">
                 Paper
               </div>
-              <div className="relative justify-start text-black text-xl font-bold font-['Roboto'] leading-7">
+              <div className="relative justify-start dark:text-white text-black text-xl font-bold font-['Roboto'] leading-7">
                 1
               </div>
             </div>
-            <div className="flex-1 p-3 bg-white rounded-md border border-black/10 inline-flex flex-col justify-start items-start gap-1 overflow-hidden">
-              <div className="self-stretch relative justify-start text-black/75 text-sm font-normal font-['Roboto'] leading-tight">
+            <div className="flex-1 p-3 dark:bg-transparent bg-white rounded-md border dark:border-white border-black inline-flex flex-col justify-start items-start gap-1 overflow-hidden">
+              <div className="self-stretch relative justify-start dark:text-[#e0e0e1] text-black text-sm font-normal font-['Roboto'] leading-tight">
                 Metal
               </div>
-              <div className="relative justify-start text-black text-xl font-bold font-['Roboto'] leading-7">
+              <div className="relative justify-start dark:text-white text-black text-xl font-bold font-['Roboto'] leading-7">
                 1
               </div>
             </div>
           </div>
           <div className="self-stretch inline-flex justify-start items-start gap-2">
-            <div className="flex-1 p-3 bg-white rounded-md border border-black/10 inline-flex flex-col justify-start items-start gap-1 overflow-hidden">
-              <div className="self-stretch relative justify-start text-black/75 text-sm font-normal font-['Roboto'] leading-tight">
+            <div className="flex-1 p-3 dark:bg-transparent bg-white rounded-md border dark:border-white border-black inline-flex flex-col justify-start items-start gap-1 overflow-hidden">
+              <div className="self-stretch relative justify-start dark:text-[#e0e0e1] text-black text-sm font-normal font-['Roboto'] leading-tight">
                 Glass
               </div>
-              <div className="relative justify-start text-black text-xl font-bold font-['Roboto'] leading-7">
+              <div className="relative justify-start dark:text-white text-black text-xl font-bold font-['Roboto'] leading-7">
                 2
               </div>
             </div>
-            <div className="flex-1 p-3 bg-white rounded-md border border-black/10 inline-flex flex-col justify-start items-start gap-1 overflow-hidden">
-              <div className="self-stretch relative justify-start text-black/75 text-sm font-normal font-['Roboto'] leading-tight">
+            <div className="flex-1 p-3 dark:bg-transparent bg-white rounded-md border dark:border-white border-black inline-flex flex-col justify-start items-start gap-1 overflow-hidden">
+              <div className="self-stretch relative justify-start dark:text-[#e0e0e1] text-black text-sm font-normal font-['Roboto'] leading-tight">
                 Other
               </div>
-              <div className="relative justify-start text-black text-xl font-bold font-['Roboto'] leading-7">
+              <div className="relative justify-start dark:text-white text-black text-xl font-bold font-['Roboto'] leading-7">
                 0
               </div>
             </div>
@@ -409,7 +409,7 @@ function App() {
         <div className="self-stretch px-3 flex flex-col justify-center items-center">
           <div className="self-stretch pt-4 inline-flex justify-start items-center gap-3">
             <div className="flex-1 inline-flex flex-col justify-start items-start">
-              <div className="self-stretch relative justify-start text-black text-lg font-medium font-['Roboto'] leading-normal">
+              <div className="self-stretch relative justify-start dark:text-white text-black text-lg font-medium font-['Roboto'] leading-normal">
                 Waste Breakdown
               </div>
             </div>
@@ -421,14 +421,14 @@ function App() {
               </div>
             </div>
             <div className="flex-1 inline-flex flex-col justify-start items-start">
-              <div className="self-stretch relative justify-start text-black text-sm font-normal font-['Roboto'] leading-tight">
+              <div className="self-stretch relative justify-start dark:text-white text-black text-sm font-normal font-['Roboto'] leading-tight">
                 Recyclable Waste
               </div>
             </div>
-            <div className="relative text-right justify-start text-black text-sm font-medium font-['Roboto'] leading-tight">
+            <div className="relative text-right justify-start dark:text-white text-black text-sm font-medium font-['Roboto'] leading-tight">
               70%
             </div>
-            <div className="w-[336px] h-0 left-0 top-[56px] absolute ring-1 ring-black/10" />
+            <div className="w-[336px] h-0 left-0 top-[56px] absolute ring-1 dark:ring-white ring-black" />
           </div>
           <div className="self-stretch py-3 relative inline-flex justify-center items-center gap-2">
             <div className="w-8 h-8 relative bg-white rounded-2xl border-[0.50px] border-[#e6e6e6]">
@@ -437,14 +437,14 @@ function App() {
               </div>
             </div>
             <div className="flex-1 inline-flex flex-col justify-start items-start">
-              <div className="self-stretch relative justify-start text-black text-sm font-normal font-['Roboto'] leading-tight">
+              <div className="self-stretch relative justify-start dark:text-white text-black text-sm font-normal font-['Roboto'] leading-tight">
                 Non-Recyclable Waste
               </div>
             </div>
-            <div className="relative text-right justify-start text-black text-sm font-medium font-['Roboto'] leading-tight">
+            <div className="relative text-right justify-start dark:text-white text-black text-sm font-medium font-['Roboto'] leading-tight">
               30%
             </div>
-            <div className="w-[336px] h-0 left-0 top-[56px] absolute ring-1 ring-black/10" />
+            <div className="w-[336px] h-0 left-0 top-[56px] absolute ring-1 dark:ring-white ring-black" />
           </div>
         </div>
       </div>
