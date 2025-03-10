@@ -36,7 +36,7 @@ function App() {
         {/* Live Camera */}
         <div
           className="
-            rounded-md border border-[#e6e6e6] inline-flex justify-start items-start overflow-hidden
+            rounded-md border dark:border-transparent border-[#e6e6e6] inline-flex justify-start items-start overflow-hidden
             lg:w-[520px] lg:h-[596px] lg:absolute lg:left-[199px] lg:top-[232px]
             md:w-[520px] md:h-[458px] md:absolute md:left-[219px] md:top-[149px]
           "
@@ -150,7 +150,7 @@ function App() {
           className="
             p-5 absolute left-0 top-0 shadow-[0px_0px_6px_0px_rgba(0,0,0,0.12)]
             inline-flex justify-center items-center gap-5 overflow-hidden
-            lg:w-[1920px] lg:h-[58px] lg:bg-[#4caf50] lg:dark:bg-[#0a0024]
+            lg:w-[1920px] lg:h-[58px] lg:bg-[#4caf50] dark:bg-[#0a0024]
             md:w-[820px] md:h-[58px] md:bg-[#4caf50]
           "
         >
@@ -250,7 +250,7 @@ function App() {
         <div
           className="
             py-3 absolute left-0 top-[58px] inline-flex flex-col justify-start items-center overflow-hidden
-            lg:w-[159px] lg:h-[1022px] lg:bg-white lg:dark:bg-[#1f0059]
+            lg:w-[159px] lg:h-[1022px] lg:bg-white dark:bg-[#1f0059]
             md:w-[159px] md:h-[1122px] md:bg-white
           "
         >
@@ -269,7 +269,7 @@ function App() {
             <div
               className="
                 flex-1 text-base font-medium font-['Roboto'] leading-tight
-                lg:text-[#212121] lg:dark:text-[#e0e0e0]
+                lg:text-[#212121] dark:text-[#e0e0e0]
                 md:text-[#212121]
               "
             >
