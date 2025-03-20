@@ -1,13 +1,39 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Switch from "react-switch";
 import { GiRecycle } from "react-icons/gi";
 import { FaTrash } from "react-icons/fa";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
+import { io } from "socket.io-client";
+
 function App() {
   // State untuk toggle koneksi dan dark mode
   const [isConnected, setIsConnected] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const socket = io("http://localhost:3000");
+    socket.on("camera_frames", (data) => {
+      if (canvasRef.current && data.image) {
+        const canvas = canvasRef.current;
+        const ctx = canvas.getContext("2d");
+        if (ctx) {
+          const img = new Image();
+          img.onload = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          };
+          img.src = "data:image/jpeg;base64," + data.image;
+        }
+        console.log(data);
+      }
+    });
+    return () => {
+      socket.disconnect();
+    };
+  }, []);
 
   // Efek dark mode: menambahkan/menghapus class 'dark' di <html>
   useEffect(() => {
@@ -42,9 +68,15 @@ function App() {
           "
         >
           <div className="flex-1 self-stretch relative bg-white dark:bg-[#1f0059]">
-            <div className="absolute left-[160px] lg:top-[276px] md:top-[218px] text-black dark:text-white text-4xl font-medium font-['Roboto'] leading-snug">
+            {/* <div className="absolute left-[160px] lg:top-[276px] md:top-[218px] text-black dark:text-white text-4xl font-medium font-['Roboto'] leading-snug">
               Live Camera
-            </div>
+            </div> */}
+            <canvas
+              ref={canvasRef}
+              width={520}
+              height={400}
+              className="w-full h-full"
+            />
           </div>
         </div>
 
