@@ -6,6 +6,7 @@ import DesktopTotalWaste from "./DesktopTotalWaste";
 import DesktopRecyclableSection from "./DesktopRecyclableSection";
 import LiveCamera from "../LiveCamera";
 import DesktopWasteCompotition from "./DesktopWasteCompotition";
+import DesktopToggle from "./DesktopToggle";
 
 interface DesktopLayoutProps {
   isConnected: boolean;
@@ -33,11 +34,20 @@ const DesktopLayout: React.FC<DesktopLayoutProps> = ({
       "
     >
       {/* Navbar */}
-      <DesktopNavbar
-        isConnected={isConnected}
-        setIsConnected={setIsConnected}
-        isDarkMode={isDarkMode}
-        setIsDarkMode={setIsDarkMode}
+      <DesktopNavbar />
+
+      {/* Toggle Device Connection*/}
+      <DesktopToggle
+        type="DeviceConnection"
+        mode={isConnected}
+        setMode={setIsConnected}
+      />
+
+      {/* Toggle Set Dark Mode */}
+      <DesktopToggle
+        type="SetDarkMode"
+        mode={isDarkMode}
+        setMode={setIsDarkMode}
       />
 
       {/* Sidebar */}

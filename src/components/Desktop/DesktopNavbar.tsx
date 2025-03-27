@@ -1,20 +1,6 @@
 // src/components/desktop/DesktopNavbar.tsx
-import Switch from "react-switch";
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
-interface DesktopNavbarProps {
-  isConnected: boolean;
-  setIsConnected: React.Dispatch<React.SetStateAction<boolean>>;
-  isDarkMode: boolean;
-  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const DesktopNavbar: React.FC<DesktopNavbarProps> = ({
-  isConnected,
-  setIsConnected,
-  isDarkMode,
-  setIsDarkMode,
-}) => {
+const DesktopNavbar: React.FC = () => {
   return (
     <div
       className="
@@ -24,54 +10,40 @@ const DesktopNavbar: React.FC<DesktopNavbarProps> = ({
         md:w-[820px] md:h-[58px] md:bg-[#4caf50]
       "
     >
+      <div
+        className="
+              relative overflow-hidden
+              lg:w-[22px] lg:h-6
+              md:w-[22px] md:h-6
+            "
+      >
+        <div
+          className="
+                absolute left-[3px]
+                lg:top-[6px] md:top-[6px]
+                lg:w-[15px] lg:h-0 lg:ring-2 lg:ring-white
+                md:w-[15px] md:h-0 md:ring-2 md:ring-white
+              "
+        />
+        <div
+          className="
+                absolute left-[3px]
+                lg:top-[12px] md:top-[12px]
+                lg:w-[15px] lg:h-0 lg:ring-2 lg:ring-white
+                md:w-[15px] md:h-0 md:ring-2 md:ring-white
+              "
+        />
+        <div
+          className="
+                absolute left-[3px]
+                lg:top-[18px] md:top-[18px]
+                lg:w-[15px] lg:h-0 lg:ring-2 lg:ring-white
+                md:w-[15px] md:h-0 md:ring-2 md:ring-white
+              "
+        />
+      </div>
       <div className="flex-1 relative text-white text-[28px] font-medium font-['Roboto'] leading-9">
         Sortify - Smart Bin
-      </div>
-
-      {/* Toggle Connection */}
-      <div
-        className="
-          inline-flex items-center gap-2
-          lg:absolute lg:left-[199px] lg:top-[83px]
-          md:absolute md:left-[219px] md:top-[83px]
-        "
-      >
-        <Switch
-          onChange={setIsConnected}
-          checked={isConnected}
-          onColor="#4caf50"
-          offColor="#ccc"
-          uncheckedIcon={false}
-          checkedIcon={false}
-        />
-        <span className="text-sm font-medium font-['Inter'] text-black dark:text-white">
-          {isConnected ? "Connected" : "Disconnected"}
-        </span>
-      </div>
-
-      {/* Toggle Dark/Light */}
-      <div
-        className="
-          inline-flex items-center gap-2
-          lg:absolute lg:left-[1783px] lg:top-[83px]
-          md:absolute md:left-[633px] md:top-[83px]
-        "
-      >
-        <Switch
-          onChange={setIsDarkMode}
-          checked={isDarkMode}
-          onColor="#4caf50"
-          offColor="#ccc"
-          uncheckedIcon={false}
-          checkedIcon={false}
-        />
-        <span className="text-sm font-medium text-black dark:text-white">
-          {isDarkMode ? (
-            <MdOutlineDarkMode className="w-[35px] h-[35px]" />
-          ) : (
-            <MdOutlineLightMode className="w-[35px] h-[35px]" />
-          )}
-        </span>
       </div>
     </div>
   );
