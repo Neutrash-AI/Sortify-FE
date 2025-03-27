@@ -49,12 +49,17 @@ const LiveCamera: React.FC<LiveCameraProps> = ({
   }, [socketUrl]);
 
   return (
-    <canvas
-      ref={canvasRef}
-      width={width}
-      height={height}
-      className="w-full h-full"
-    />
+    <div className="flex-1 self-stretch relative bg-white dark:bg-[#1f0059]">
+      {/* <div className="absolute left-[160px] lg:top-[276px] md:top-[218px] text-black dark:text-white text-4xl font-medium font-['Roboto'] leading-snug">
+              Live Camera
+            </div> */}
+      <canvas
+        ref={canvasRef}
+        width={width}
+        height={height}
+        className="w-full h-full"
+      />
+    </div>
   );
 };
 
