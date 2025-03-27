@@ -22,7 +22,7 @@ const MobileWasteBreakdownCard: React.FC<MobileWasteBreakdownCardProps> = ({
         </div>
       </div>
       <div className="relative text-right justify-start dark:text-white text-black text-sm font-medium leading-tight">
-        {value}
+        {value}%
       </div>
     </div>
   );
