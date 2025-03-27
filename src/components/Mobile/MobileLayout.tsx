@@ -1,6 +1,6 @@
 // src/components/mobile/MobileLayout.tsx
 import MobileNavbar from "./MobileNavbar";
-import MobileWasteOverview from "./MobileWasteOverview";
+import MobileWasteOverview from "./MobileWasteOverview/MobileWasteOverview";
 import MobileWasteBreakdown from "./MobileWasteBreakdown";
 import MobileToggle from "./MobileToggle";
 
