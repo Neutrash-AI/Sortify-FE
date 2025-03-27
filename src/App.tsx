@@ -38,6 +38,7 @@ function App() {
         setIsConnected={setIsConnected}
         isDarkMode={isDarkMode}
         setIsDarkMode={setIsDarkMode}
+        socketUrl={socketUrl}
       />
     </>
   );
