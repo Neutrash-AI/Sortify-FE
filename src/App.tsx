@@ -3,13 +3,15 @@ import { useState, useEffect } from "react";
 import DesktopLayout from "./components/Desktop/DesktopLayout";
 import MobileLayout from "./components/Mobile/MobileLayout";
 
+import { HOSTNAME } from "./constant/hostname";
+
 function App() {
   // State untuk toggle koneksi dan dark mode
   const [isConnected, setIsConnected] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // URL backend untuk Socket.IO
-  const socketUrl = "http://localhost:3000";
+  const socketUrl = `http://${HOSTNAME}:3000`;
 
   // Efek dark mode: menambahkan/menghapus class 'dark' di <html>
   useEffect(() => {
