@@ -1,6 +1,6 @@
-// src/components/desktop/DesktopOverview.tsx
+// src/components/desktop/DesktopTotalWaste.tsx
 
-const DesktopOverview: React.FC = () => {
+const DesktopTotalWaste: React.FC = () => {
   return (
     <div
       className="
@@ -34,4 +34,4 @@ const DesktopOverview: React.FC = () => {
   );
 };
 
-export default DesktopOverview;
+export default DesktopTotalWaste;

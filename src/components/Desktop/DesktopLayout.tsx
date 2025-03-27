@@ -2,7 +2,7 @@
 import React from "react";
 import DesktopNavbar from "./DesktopNavbar";
 import DesktopSidebar from "./DesktopSidebar";
-import DesktopOverview from "./DesktopOverview";
+import DesktopTotalWaste from "./DesktopTotalWaste";
 import DesktopRecyclableSection from "./DesktopRecyclableSection";
 import LiveCamera from "../LiveCamera";
 import DesktopWasteCompotition from "./DesktopWasteCompotition";
@@ -55,8 +55,8 @@ const DesktopLayout: React.FC<DesktopLayoutProps> = ({
         <LiveCamera socketUrl={socketUrl} width={520} height={400} />
       </div>
 
-      {/* Overview */}
-      <DesktopOverview />
+      {/* Total Waste */}
+      <DesktopTotalWaste />
 
       {/* Waste Compotition */}
       <DesktopWasteCompotition />
