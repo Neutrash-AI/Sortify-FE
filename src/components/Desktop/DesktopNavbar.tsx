@@ -1,5 +1,4 @@
 // src/components/desktop/DesktopNavbar.tsx
-import React from "react";
 import Switch from "react-switch";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
