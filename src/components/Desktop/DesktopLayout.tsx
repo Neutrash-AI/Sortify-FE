@@ -5,6 +5,7 @@ import DesktopSidebar from "./DesktopSidebar";
 import DesktopOverview from "./DesktopOverview";
 import DesktopRecyclableSection from "./DesktopRecyclableSection";
 import LiveCamera from "../LiveCamera";
+import DesktopWasteCompotition from "./DesktopWasteCompotition";
 
 interface DesktopLayoutProps {
   isConnected: boolean;
@@ -56,6 +57,9 @@ const DesktopLayout: React.FC<DesktopLayoutProps> = ({
 
       {/* Overview */}
       <DesktopOverview />
+
+      {/* Waste Compotition */}
+      <DesktopWasteCompotition />
 
       {/* Recyclable Section */}
       <DesktopRecyclableSection />
