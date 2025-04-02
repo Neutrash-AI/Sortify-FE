@@ -15,10 +15,10 @@ const DesktopRecyclableSection: React.FC = () => {
         {/* Recyclable Waste */}
         <div className="flex-1 py-[0.63vw] inline-flex flex-col justify-center items-center gap-[1.05vw]">
           <div className="w-[5.2vw] h-[5.2vw] flex items-center justify-center bg-white dark:bg-[#1f0059] rounded-full border border-[#e6e6e6]">
-            <GiRecycle className="text-4xl text-green-500 dark:text-white" />
+            <GiRecycle className="text-[2vw] text-green-500 dark:text-white" />
           </div>
           <div className="w-full flex flex-col justify-start items-center gap-[0.42vw]">
-            <div className="w-full text-center text-black dark:text-white text-xl font-normal font-['Roboto'] leading-[1.47vw]">
+            <div className="w-full text-center text-black dark:text-white text-[1.1vw] font-normal font-['Roboto'] leading-[1.47vw]">
               Recyclable Waste
             </div>
           </div>
@@ -30,10 +30,10 @@ const DesktopRecyclableSection: React.FC = () => {
         {/* Non-Recyclable Waste */}
         <div className="flex-1 py-[0.63vw] inline-flex flex-col justify-center items-center gap-[1.05vw]">
           <div className="w-[5.2vw] h-[5.2vw] flex items-center justify-center bg-white dark:bg-[#1f0059] rounded-full border border-[#e6e6e6]">
-            <FaTrash className="text-4xl text-red-500 dark:text-white" />
+            <FaTrash className="text-[2vw] text-red-500 dark:text-white" />
           </div>
           <div className="w-full flex flex-col justify-start items-center gap-[0.42vw]">
-            <div className="w-full text-center text-black dark:text-white text-xl font-normal font-['Roboto'] leading-[1.47vw]">
+            <div className="w-full text-center text-black dark:text-white text-[1.1vw] font-normal font-['Roboto'] leading-[1.47vw]">
               Non-Recyclable Waste
             </div>
           </div>

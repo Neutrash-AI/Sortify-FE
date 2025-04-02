@@ -27,6 +27,7 @@ const DesktopToggle: React.FC<DesktopToggleProps> = ({
         offColor="#ccc"
         uncheckedIcon={false}
         checkedIcon={false}
+        className="w-[3vw] h-[1.4vw]"
       />
       <span className="text-[0.835vw] font-medium font-['Inter'] text-black dark:text-white">
         {type === "DeviceConnection" ? (

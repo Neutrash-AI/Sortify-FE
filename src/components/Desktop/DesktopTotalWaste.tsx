@@ -4,26 +4,26 @@ const DesktopTotalWaste: React.FC = () => {
   return (
     <div
       className="
-        inline-flex flex-col justify-center items-center gap-10
-        lg:w-[1100px] lg:absolute lg:left-[783px] lg:top-[232px]
-        md:w-[520px] md:absolute md:left-[219px] md:top-[650px]
-      "
+      inline-flex flex-col justify-center items-center gap-[2.10vw]
+      lg:w-[57.66vw] lg:absolute lg:left-[41.10vw] lg:top-[12.17vw]
+      md:w-[27.3vw] md:absolute md:left-[11.49vw] md:top-[34.14vw]
+    "
     >
-      <div className="w-full lg:inline-flex lg:justify-start lg:items-start lg:gap-5 md:grid md:grid-cols-3 md:gap-5">
+      <div className="w-full lg:inline-flex lg:justify-start lg:items-start lg:gap-[1.05vw] md:grid md:grid-cols-3 md:gap-[1.05vw]">
         {["Total Waste", "Plastic", "Paper", "Metal", "Glass", "Other"].map(
           (label, idx) => (
             <div
               key={idx}
               className="
-                flex-1 p-4 bg-white dark:bg-transparent rounded-md border
-                border-black dark:border-white inline-flex flex-col
-                justify-start items-start gap-1 overflow-hidden
-              "
+              flex-1 p-[0.84vw] bg-white dark:bg-transparent rounded-md border
+              border-black dark:border-white inline-flex flex-col
+              justify-start items-start gap-[0.21vw] overflow-hidden
+            "
             >
-              <div className="w-full text-black dark:text-[#e0e0e1] text-base font-normal font-['Roboto'] leading-normal">
+              <div className="w-full text-black dark:text-[#e0e0e1] text-[0.9vw] font-normal font-['Roboto'] leading-normal">
                 {label}
               </div>
-              <div className="relative text-black dark:text-white text-[28px] font-medium font-['Roboto'] leading-9">
+              <div className="relative text-black dark:text-white text-[1.47vw] font-medium font-['Roboto'] leading-[1.89vw]">
                 {label === "Glass" ? 2 : label === "Other" ? 0 : 1}
               </div>
             </div>
