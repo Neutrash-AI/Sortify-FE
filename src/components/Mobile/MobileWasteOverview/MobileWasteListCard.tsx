@@ -14,7 +14,7 @@ const MobileWasteListCard: React.FC<MobileWasteListCardProps> = ({
   value2,
 }) => {
   return (
-    <div className="self-stretch inline-flex justify-start items-start gap-2">
+    <div className="self-stretch inline-flex justify-start items-start gap-[2.22vw]">
       <MobileWasteCard desc={desc1} value={value1} />
       <MobileWasteCard desc={desc2} value={value2} />
     </div>
