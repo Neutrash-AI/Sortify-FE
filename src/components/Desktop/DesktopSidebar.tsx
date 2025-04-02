@@ -23,7 +23,7 @@ const DesktopSidebar: React.FC = () => {
         </div>
         <div
           className="
-        flex-1 text-base font-medium font-['Roboto'] leading-tight
+        flex-1 text-[0.835vw] font-medium font-['Roboto'] leading-tight
         lg:text-[#212121] dark:lg:text-[#e0e0e0]
         md:text-[#212121]
       "

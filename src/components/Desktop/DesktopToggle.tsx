@@ -14,10 +14,10 @@ const DesktopToggle: React.FC<DesktopToggleProps> = ({
 }) => {
   return (
     <div
-      className={`inline-flex items-center gap-2 ${
+      className={`inline-flex items-center gap-[0.42vw] ${
         type === "DeviceConnection"
-          ? "lg:absolute lg:left-[199px] lg:top-[83px] md:absolute md:left-[219px] md:top-[83px]"
-          : " lg:absolute lg:left-[1783px] lg:top-[83px] md:absolute md:left-[633px] md:top-[83px]"
+          ? "lg:absolute lg:left-[10.45vw] lg:top-[4.36vw] md:absolute md:left-[11.49vw] md:top-[4.36vw]"
+          : " lg:absolute lg:left-[93.54vw] lg:top-[4.36vw] md:absolute md:left-[33.23vw] md:top-[4.36vw]"
       }`}
     >
       <Switch
@@ -28,7 +28,7 @@ const DesktopToggle: React.FC<DesktopToggleProps> = ({
         uncheckedIcon={false}
         checkedIcon={false}
       />
-      <span className="text-sm font-medium font-['Inter'] text-black dark:text-white">
+      <span className="text-[0.835vw] font-medium font-['Inter'] text-black dark:text-white">
         {type === "DeviceConnection" ? (
           mode ? (
             "Connected"
@@ -36,9 +36,9 @@ const DesktopToggle: React.FC<DesktopToggleProps> = ({
             "Disconnected"
           )
         ) : mode ? (
-          <MdOutlineDarkMode className="w-[35px] h-[35px]" />
+          <MdOutlineDarkMode className="w-[1.84vw] h-[1.84vw]" />
         ) : (
-          <MdOutlineLightMode className="w-[35px] h-[35px]" />
+          <MdOutlineLightMode className="w-[1.84vw] h-[1.84vw]" />
         )}
       </span>
     </div>
