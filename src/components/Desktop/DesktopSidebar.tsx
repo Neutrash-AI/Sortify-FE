@@ -9,7 +9,7 @@ const DesktopSidebar: React.FC = () => {
     md:w-[19.39vw] md:bg-white
   "
     >
-      <div className="w-full md:px-[2.44vw] lg:px-[1.05vw] md:py-[1.95vw] lg:py-[0.84vw] inline-flex justify-center items-center gap-[0.63vw] cursor-pointer hover:bg-gray-100">
+      <div className="w-full md:px-[2.44vw] lg:px-[1.05vw] md:py-[1.95vw] lg:py-[0.84vw] inline-flex justify-center items-center gap-[0.63vw] cursor-pointer hover:bg-gray-200 dark:hover:bg-black">
         <div
           className="
         relative rounded-xl

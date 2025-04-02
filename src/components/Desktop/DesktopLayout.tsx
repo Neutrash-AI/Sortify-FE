@@ -8,21 +8,11 @@ import LiveCamera from "../LiveCamera";
 import DesktopWasteCompotition from "./DesktopWasteCompotition";
 import DesktopToggle from "./DesktopToggle";
 
-interface DesktopLayoutProps {
-  isConnected: boolean;
-  setIsConnected: React.Dispatch<React.SetStateAction<boolean>>;
-  isDarkMode: boolean;
-  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-  socketUrl: string;
-}
+import { useGlobalState } from "../../context/useGlobalState";
 
-const DesktopLayout: React.FC<DesktopLayoutProps> = ({
-  isConnected,
-  setIsConnected,
-  isDarkMode,
-  setIsDarkMode,
-  socketUrl,
-}) => {
+const DesktopLayout: React.FC = () => {
+  const { isConnected, setIsConnected, isDarkMode, setIsDarkMode } =
+    useGlobalState();
   return (
     <main
       className="
@@ -62,7 +52,7 @@ const DesktopLayout: React.FC<DesktopLayoutProps> = ({
         md:w-[63.4vw] md:h-[55.83vw] md:absolute md:left-[26.71vw] md:top-[18.17vw]
       "
       >
-        <LiveCamera socketUrl={socketUrl} width={520} height={400} />
+        <LiveCamera width={520} height={400} />
       </div>
 
       {/* Total Waste */}

@@ -2,17 +2,19 @@
 import { useRef, useEffect } from "react";
 import { io } from "socket.io-client";
 
+import { useGlobalState } from "../context/useGlobalState";
+
 interface LiveCameraProps {
-  socketUrl: string; // URL server backend, misalnya http://localhost:3000
   width?: number; // Lebar canvas
   height?: number; // Tinggi canvas
 }
 
 const LiveCamera: React.FC<LiveCameraProps> = ({
-  socketUrl,
   width = 520,
   height = 400,
 }) => {
+  const { socketUrl } = useGlobalState();
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
