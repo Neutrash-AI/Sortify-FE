@@ -14,6 +14,7 @@ export const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
   // State untuk toggle koneksi dan dark mode
   const [isConnected, setIsConnected] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const [displaySidebar, setDisplaySidebar] = useState<boolean>(false);
 
   // URL backend untuk Socket.IO
   const socketUrl = `http://${HOSTNAME}:3000`;
@@ -45,6 +46,8 @@ export const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
         setIsDarkMode,
         isConnected,
         setIsConnected,
+        displaySidebar,
+        setDisplaySidebar,
         socketUrl,
       }}
     >

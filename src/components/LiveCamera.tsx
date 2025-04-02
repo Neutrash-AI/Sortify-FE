@@ -49,7 +49,7 @@ const LiveCamera: React.FC<LiveCameraProps> = ({
     return () => {
       socket.disconnect();
     };
-  }, [socketUrl]);
+  }, [socketUrl, setIsConnected]);
 
   return (
     <div className="flex-1 self-stretch relative bg-white dark:bg-[#1f0059] rounded-md border border-[#e6e6e6] dark:border-transparent">

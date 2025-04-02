@@ -6,6 +6,8 @@ interface GlobalStateContextType {
   setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
   isConnected: boolean;
   setIsConnected: React.Dispatch<React.SetStateAction<boolean>>;
+  displaySidebar: boolean;
+  setDisplaySidebar: React.Dispatch<React.SetStateAction<boolean>>;
   socketUrl: string;
 }
 
