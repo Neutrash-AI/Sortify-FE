@@ -11,8 +11,13 @@ import DesktopToggle from "./DesktopToggle";
 import { useGlobalState } from "../../context/useGlobalState";
 
 const DesktopLayout: React.FC = () => {
-  const { isConnected, setIsConnected, isDarkMode, setIsDarkMode } =
-    useGlobalState();
+  const {
+    isConnected,
+    setIsConnected,
+    isDarkMode,
+    setIsDarkMode,
+    displaySidebar,
+  } = useGlobalState();
   return (
     <main
       className="
@@ -45,12 +50,12 @@ const DesktopLayout: React.FC = () => {
 
       {/* Live Camera */}
       <div
-        className="
-        rounded-md border dark:border-transparent border-[#e6e6e6]
+        className={`${
+          displaySidebar ? "translate-x-0" : "md:-translate-x-[9vw] lg:-translate-x-[5vw]"
+        }  rounded-md border dark:border-transparent border-[#e6e6e6]
         inline-flex justify-center items-center overflow-hidden
         lg:w-[27.3vw] lg:h-[31.3vw] lg:absolute lg:left-[10.5vw] lg:top-[12.2vw]
-        md:w-[63.4vw] md:h-[55.83vw] md:absolute md:left-[26.71vw] md:top-[18.17vw]
-      "
+        md:w-[63.4vw] md:h-[55.83vw] md:absolute md:left-[26.71vw] md:top-[18.17vw] transform transition-transform duration-500 ease-in-out`}
       >
         <LiveCamera width={520} height={400} />
       </div>

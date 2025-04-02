@@ -1,14 +1,22 @@
 // src/components/desktop/DesktopRecyclableSection.tsx
+
 import { GiRecycle } from "react-icons/gi";
 import { FaTrash } from "react-icons/fa";
 
+import { useGlobalState } from "../../context/useGlobalState";
+
 const DesktopRecyclableSection: React.FC = () => {
+  const { displaySidebar } = useGlobalState();
   return (
     <div
-      className="
-        inline-flex flex-col justify-center items-center gap-[2.01vw]
+      className={`${
+        displaySidebar
+          ? "translate-x-0"
+          : "md:-translate-x-[9vw] lg:-translate-x-[5vw]"
+      } inline-flex flex-col justify-center items-center gap-[2.01vw]
         lg:w-[27.3vw] lg:absolute lg:left-[69.9vw] lg:top-[20.4vw]
-         md:w-[63.4vw] md:absolute md:left-[25.5vw] md:top-[109.8vw]"
+         md:w-[63.4vw] md:absolute md:left-[25.5vw] md:top-[109.8vw]
+         transform transition-transform duration-500 ease-in-out`}
     >
       <div className="w-full inline-flex justify-start items-center gap-[2.01vw]">
         {/* Recyclable Waste */}

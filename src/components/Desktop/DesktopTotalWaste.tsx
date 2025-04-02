@@ -1,13 +1,17 @@
 // src/components/desktop/DesktopTotalWaste.tsx
 
+import { useGlobalState } from "../../context/useGlobalState";
+
 const DesktopTotalWaste: React.FC = () => {
+  const { displaySidebar } = useGlobalState();
   return (
     <div
-      className="
-      inline-flex flex-col justify-center items-center md:gap-[4.88vw] lg:gap-[2.10vw]
+      className={`${
+        displaySidebar ? "translate-x-0" : "md:-translate-x-[9vw] lg:-translate-x-[5vw]"
+      } inline-flex flex-col justify-center items-center md:gap-[4.88vw] lg:gap-[2.10vw]
       lg:w-[57.66vw] lg:absolute lg:left-[41.10vw] lg:top-[12.17vw]
-       md:w-[63.41vw] md:absolute md:left-[26.71vw] md:top-[79.27vw]
-    "
+       md:w-[63.41vw] md:absolute md:left-[26.71vw] md:top-[79.27vw] 
+       transform transition-transform duration-500 ease-in-out`}
     >
       <div className="w-full lg:inline-flex lg:justify-start lg:items-start lg:gap-[1.05vw] md:grid md:grid-cols-3 md:gap-[2.44vw]">
         {["Total Waste", "Plastic", "Paper", "Metal", "Glass", "Other"].map(

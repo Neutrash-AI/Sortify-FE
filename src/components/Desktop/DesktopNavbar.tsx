@@ -1,6 +1,9 @@
 // src/components/desktop/DesktopNavbar.tsx
 
+import { useGlobalState } from "../../context/useGlobalState";
+
 const DesktopNavbar: React.FC = () => {
+  const { setDisplaySidebar } = useGlobalState();
   return (
     <div
       className="
@@ -17,6 +20,7 @@ const DesktopNavbar: React.FC = () => {
             md:w-[2.68vw] md:h-[2.92vw]
             cursor-pointer
           "
+        onClick={() => setDisplaySidebar((prev) => !prev)}
       >
         <div
           className="

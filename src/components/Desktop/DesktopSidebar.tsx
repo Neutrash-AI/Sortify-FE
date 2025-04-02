@@ -1,13 +1,16 @@
 // src/components/desktop/DesktopSidebar.tsx
 
+import { useGlobalState } from "../../context/useGlobalState";
+
 const DesktopSidebar: React.FC = () => {
+  const { displaySidebar } = useGlobalState();
   return (
     <div
-      className="
-    py-[0.63vw] absolute left-0 md:top-[7.07vw] lg:top-[3.04vw] inline-flex flex-col justify-start items-center overflow-hidden
-    lg:w-[8.34vw] h-screen lg:bg-white dark:bg-[#1f0059]
-    md:w-[19.39vw] md:bg-white
-  "
+      className={`${
+        displaySidebar ? "translate-x-0" : "-translate-x-full"
+      } py-[0.63vw] absolute left-0 md:top-[7.07vw] lg:top-[3.04vw] inline-flex flex-col justify-start items-center overflow-hidden
+    lg:w-[8.34vw] h-screen lg:bg-white dark:bg-[#1f0059] transform transition-transform duration-500 ease-in-out
+    md:w-[19.39vw] md:bg-white`}
     >
       <div className="w-full md:px-[2.44vw] lg:px-[1.05vw] md:py-[1.95vw] lg:py-[0.84vw] inline-flex justify-center items-center gap-[0.63vw] cursor-pointer hover:bg-gray-200 dark:hover:bg-black">
         <div
