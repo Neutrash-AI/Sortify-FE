@@ -13,7 +13,7 @@ const LiveCamera: React.FC<LiveCameraProps> = ({
   width = 520,
   height = 400,
 }) => {
-  const { socketUrl } = useGlobalState();
+  const { socketUrl, setIsConnected } = useGlobalState();
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -21,6 +21,7 @@ const LiveCamera: React.FC<LiveCameraProps> = ({
     const socket = io(socketUrl);
 
     socket.on("camera_frames", (data: { image: string }) => {
+      setIsConnected(true);
       if (canvasRef.current && data.image) {
         const ctx = canvasRef.current.getContext("2d");
         if (ctx) {
