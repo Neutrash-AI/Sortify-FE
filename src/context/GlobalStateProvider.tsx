@@ -18,13 +18,23 @@ export const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
   // URL backend untuk Socket.IO
   const socketUrl = `http://${HOSTNAME}:3000`;
 
-  // Efek dark mode: menambahkan/menghapus class 'dark' di <html>
+  // Saat komponen pertama kali mount, baca dari localStorage
+  useEffect(() => {
+    const storedDarkMode = localStorage.getItem("darkMode");
+    if (storedDarkMode === "true") {
+      setIsDarkMode(true);
+    }
+  }, []);
+
+  // Update localStorage setiap kali isDarkMode berubah
   useEffect(() => {
     const root = document.documentElement;
     if (isDarkMode) {
       root.classList.add("dark");
+      localStorage.setItem("darkMode", "true");
     } else {
       root.classList.remove("dark");
+      localStorage.setItem("darkMode", "false");
     }
   }, [isDarkMode]);
 
