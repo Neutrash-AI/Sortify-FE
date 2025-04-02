@@ -13,8 +13,8 @@ const MobileToggle: React.FC<MobileToggleProps> = ({ type, mode, setMode }) => {
       data-state="On"
       className={`${
         type === "DeviceConnection"
-          ? "w-[149px] h-[24.66px] pl-[15px] left-0 top-0 absolute inline-flex justify-start items-center"
-          : "w-12 h-[26px] left-[258px] top-[-0.82px] absolute inline-flex justify-start items-center"
+          ? "w-[41.39vw] h-[6.85vw] pl-[4.17vw] left-0 top-0 absolute inline-flex justify-start items-center gap-[3vw]"
+          : "w-[13.33vw] h-[7.22vw] left-[69vw] top-[-0.23vw] absolute inline-flex justify-start items-center gap-[3vw]"
       }`}
     >
       <Switch
@@ -25,7 +25,7 @@ const MobileToggle: React.FC<MobileToggleProps> = ({ type, mode, setMode }) => {
         uncheckedIcon={false}
         checkedIcon={false}
       />
-      <span className="text-sm font-medium font-['Inter'] text-black dark:text-white">
+      <span className="text-[3.8vw] font-medium font-['Inter'] text-black dark:text-white">
         {type === "DeviceConnection" ? (
           mode ? (
             "Connected"
@@ -33,9 +33,9 @@ const MobileToggle: React.FC<MobileToggleProps> = ({ type, mode, setMode }) => {
             "Disconnected"
           )
         ) : mode ? (
-          <MdOutlineDarkMode className="w-[35px] h-[35px]" />
+          <MdOutlineDarkMode className="w-[9.72vw] h-[9.72vw]" />
         ) : (
-          <MdOutlineLightMode className="w-[35px] h-[35px]" />
+          <MdOutlineLightMode className="w-[9.72vw] h-[9.72vw]" />
         )}
       </span>
     </div>
