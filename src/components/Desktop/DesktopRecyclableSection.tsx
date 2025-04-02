@@ -8,7 +8,7 @@ const DesktopRecyclableSection: React.FC = () => {
       className="
         inline-flex flex-col justify-center items-center gap-[2.01vw]
         lg:w-[27.3vw] lg:absolute lg:left-[69.9vw] lg:top-[20.4vw]
-         md:w-[63.4vw] md:absolute md:left-[25.5vw] md:top-[107vw]"
+         md:w-[63.4vw] md:absolute md:left-[25.5vw] md:top-[109.8vw]"
     >
       <div className="w-full inline-flex justify-start items-center gap-[2.01vw]">
         {/* Recyclable Waste */}

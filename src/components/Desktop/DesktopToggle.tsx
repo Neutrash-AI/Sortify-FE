@@ -17,7 +17,7 @@ const DesktopToggle: React.FC<DesktopToggleProps> = ({
       className={`inline-flex items-center md:gap-[1vw] lg:gap-[0.42vw] ${
         type === "DeviceConnection"
           ? "lg:absolute lg:left-[10.45vw] lg:top-[4.36vw] md:absolute md:left-[26.7vw] md:top-[10.1vw]"
-          : " lg:absolute lg:left-[93.54vw] lg:top-[4.36vw] md:absolute md:left-[77.19vw] md:top-[10.1vw]"
+          : " lg:absolute lg:left-[92vw] lg:top-[4.36vw] md:absolute md:left-[77.19vw] md:top-[10.1vw]"
       }`}
     >
       <Switch
