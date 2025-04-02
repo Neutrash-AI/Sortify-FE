@@ -15,6 +15,7 @@ const DesktopNavbar: React.FC = () => {
             relative overflow-hidden
             lg:w-[1.2vw] lg:h-[1.26vw]
             md:w-[2.68vw] md:h-[2.92vw]
+            cursor-pointer
           "
       >
         <div
