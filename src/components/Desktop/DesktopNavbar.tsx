@@ -20,26 +20,26 @@ const DesktopNavbar: React.FC = () => {
         <div
           className="
               absolute left-[0.2vw]
-              lg:top-[0.3vw] md:top-[1.463vw]
+              lg:top-[0.3vw] md:top-[0.6vw]
               lg:w-[0.8vw] lg:h-0 lg:ring-[0.1vw] lg:ring-white
-              md:w-[1.83vw] md:h-0 md:ring-[0.9vw] md:ring-white
+              md:w-[1.83vw] md:h-0 md:ring-[0.2vw] md:ring-white
             "
         />
         <div
           className="
          absolute left-[0.2vw]
-         lg:top-[0.3vw] md:top-[1.463vw]
+         lg:top-[0.7vw] md:top-[1.4vw]
          lg:w-[0.8vw] lg:h-0 lg:ring-[0.1vw] lg:ring-white
-         md:w-[1.83vw] md:h-0 md:ring-[0.9vw] md:ring-white
+         md:w-[1.83vw] md:h-0 md:ring-[0.2vw] md:ring-white
        "
         />
         <div
           className="
-          absolute left-[0.2vw]
-          lg:top-[0.3vw] md:top-[1.463vw]
-          lg:w-[0.8vw] lg:h-0 lg:ring-[0.1vw] lg:ring-white
-          md:w-[1.83vw] md:h-0 md:ring-[0.9vw] md:ring-white
-        "
+         absolute left-[0.2vw]
+         lg:top-[1.1vw] md:top-[2.2vw]
+         lg:w-[0.8vw] lg:h-0 lg:ring-[0.1vw] lg:ring-white
+         md:w-[1.83vw] md:h-0 md:ring-[0.2vw] md:ring-white
+       "
         />
       </div>
       <div className="flex-1 relative text-white md:text-[3.4vw] lg:text-[1.5vw] font-medium font-['Roboto'] md:leading-[4.39vw] lg:leading-[1.89vw]">
