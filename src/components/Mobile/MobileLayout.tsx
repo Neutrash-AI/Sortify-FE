@@ -21,10 +21,10 @@ const MobileLayout: React.FC<MobileLayoutProps> = ({
   socketUrl,
 }) => {
   return (
-    <div className="md:hidden w-[360px] h-[922px] pb-3 dark:bg-[#15003f] bg-[#f7f6f9] inline-flex flex-col justify-center items-start gap-3">
+    <div className="md:hidden w-screen h-[256.11vw] pb-[3.33vw] dark:bg-[#15003f] bg-[#f7f6f9] inline-flex flex-col justify-center items-start gap-[3.33vw]">
       {/* Navbar Mobile */}
       <MobileNavbar />
-      <div className="w-[348px] h-[34px] relative">
+      <div className="w-[96.67vw] h-[9.44vw] relative">
         {/* Toggles */}
         <MobileToggle
           type="DeviceConnection"
@@ -39,7 +39,7 @@ const MobileLayout: React.FC<MobileLayoutProps> = ({
       </div>
 
       {/* Contoh placeholder camera */}
-      <div className="self-stretch h-[296px] px-3 inline-flex justify-start items-start overflow-hidden">
+      <div className="self-stretch h-[82.22vw] px-[3.33vw] inline-flex justify-start items-start overflow-hidden">
         <LiveCamera socketUrl={socketUrl} width={520} height={400} />
       </div>
 
