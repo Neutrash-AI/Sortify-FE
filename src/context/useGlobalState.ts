@@ -9,6 +9,9 @@ interface GlobalStateContextType {
   displaySidebar: boolean;
   setDisplaySidebar: React.Dispatch<React.SetStateAction<boolean>>;
   socketUrl: string;
+  totalCount: number;
+  organicCount: number;
+  recycleCount: number;
 }
 
 export const GlobalStateContext = createContext<
