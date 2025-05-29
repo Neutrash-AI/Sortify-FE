@@ -65,11 +65,32 @@ pnpm dev
 
 ---
 
+## 📸 Tampilan Antarmuka
+
+Sortify dirancang dengan responsivitas penuh untuk berbagai perangkat dan mendukung mode terang dan gelap.
+
+| Handphone                                      | Tablet                                                 | Laptop                                                 |
+| ---------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------ |
+| ![hp-light](./public/screenshots/hp-light.png) | ![tablet-light](./public/screenshots/tablet-light.png) | ![laptop-light](./public/screenshots/laptop-light.png) |
+| ![hp-dark](./public/screenshots/hp-dark.png)   | ![tablet-dark](./public/screenshots/tablet-dark.png)   | ![laptop-dark](./public/screenshots/laptop-dark.png)   |
+
+---
+
+## 🌐 Peran Frontend
+
+Frontend Sortify berfungsi untuk:
+
+- Menampilkan hasil **klasifikasi sampah** dari kamera ESP32 atau webcam.
+- Menampilkan data statistik seperti persentase komposisi sampah dan total yang sudah diklasifikasikan.
+- Mendukung **visualisasi real-time dari kamera** yang digunakan untuk klasifikasi sampah, menggunakan koneksi **Socket.IO** ke backend.
+
+---
+
 ## 📌 Struktur Proyek
 
 ```
 📦 sortify-frontend
-├── 📂 public/        # File statis (favicon, manifest, dll)
+├── 📂 public/        # File statis (favicon, manifest, screenshot UI, dll)
 ├── 📂 src/           # Kode utama aplikasi
 │   ├── 📂 assets/    # Gambar & ikon yang diimpor langsung
 │   ├── 📂 components/ # Komponen UI yang dapat digunakan kembali
@@ -77,17 +98,19 @@ pnpm dev
 │   ├── 📜 App.tsx    # Komponen utama aplikasi
 │   ├── 📜 main.tsx   # Entry point aplikasi
 │   ├── 📜 index.css  # File Tailwind CSS utama
-│   ├── 📂 hooks/     # Custom hooks (jika ada)
-│   ├── 📂 utils/     # Helper functions (jika ada)
+│   ├── 📂 context/   # Variabel Global
+│   ├── 📂 constant/  # Fungsi constant (ex: mendapatkan IP dinamis)
 ├── 📜 package.json   # Dependensi proyek
 ├── 📜 tailwind.config.js # Konfigurasi Tailwind CSS
 ├── 📜 vite.config.ts  # Konfigurasi Vite
 └── 📜 .gitignore     # File & folder yang tidak di-push ke GitHub
 ```
 
+---
+
 ## ❓ FAQ
 
-❓ **Apa yang harus saya lakukan jika terjadi error saat menjalankan `npm install`?**  
+❓ **Apa yang harus saya lakukan jika terjadi error saat menjalankan `npm install`?**
 ✅ Pastikan Anda menggunakan **Node.js versi terbaru**. Cek dengan:
 
 ```sh
@@ -96,7 +119,7 @@ node -v
 
 Jika belum terinstall, unduh dari [Node.js official website](https://nodejs.org/).
 
-❓ **Bagaimana jika port 5173 sudah digunakan?**  
+❓ **Bagaimana jika port 5173 sudah digunakan?**
 ✅ Jalankan Vite di port lain dengan:
 
 ```sh
@@ -105,6 +128,4 @@ npm run dev -- --port=3000
 
 ---
 
-## 🚀 Selamat Coding!
-
-Sekarang Anda siap untuk mulai mengembangkan **Sortify**! Jika ada pertanyaan atau kendala, jangan ragu untuk membuka **issue** di repository ini. 🌱✨
+## 🚀 Happy Coding!
