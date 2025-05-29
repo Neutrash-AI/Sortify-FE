@@ -52,25 +52,47 @@ export const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
     socket.on("connect", () => setIsConnected(true));
     socket.on("disconnect", () => setIsConnected(false));
 
+    // Use a ref to track cooldown state within the effect
+    const processingRef = { current: false };
+
     socket.on(
       "camera_frames",
       (data: { detections?: { label: string; confidence: number }[] }) => {
-      const det = data.detections?.[0];
-      // Skip if no detection exists
-      if (!det) return;
+        // Skip if currently in cooldown period
+        if (processingRef.current) return;
 
-      // Different confidence thresholds based on label
-      if (det.label === "Organic" && det.confidence > 0.4) {
-      setTimeout(() => {
-        setTotalCount((c) => c + 1);
-        setOrganicCount((c) => c + 1);
-      }, 5000);
-      } else if (det.label === "Recycle" && det.confidence > 0.91) {
-      setTimeout(() => {
-        setTotalCount((c) => c + 1);
-        setRecycleCount((c) => c + 1);
-      }, 5000);
-      }
+        const det = data.detections?.[0];
+        // Skip if no detection exists
+        if (!det) return;
+
+        // Different confidence thresholds based on label
+        if (det.label === "Organic" && det.confidence > 0.4) {
+          // Mark as processing to prevent more detections
+          processingRef.current = true;
+
+          setTimeout(() => {
+            setTotalCount((c) => c + 1);
+            setOrganicCount((c) => c + 1);
+          }, 8000);
+
+          // Reset processing flag after 6 seconds
+          setTimeout(() => {
+            processingRef.current = false;
+          }, 8000);
+        } else if (det.label === "Recycle" && det.confidence > 0.91) {
+          // Mark as processing to prevent more detections
+          processingRef.current = true;
+
+          setTimeout(() => {
+            setTotalCount((c) => c + 1);
+            setRecycleCount((c) => c + 1);
+          }, 8000);
+
+          // Reset processing flag after 6 seconds
+          setTimeout(() => {
+            processingRef.current = false;
+          }, 8000);
+        }
       }
     );
 
