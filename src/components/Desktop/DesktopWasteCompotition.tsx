@@ -9,15 +9,15 @@ import {
 
 import { useGlobalState } from "../../context/useGlobalState";
 
-const data = [
-  { name: "Organic", value: 0 },
-  { name: "Recycle", value: 0 },
-];
-
-const COLORS = ["#4caf50", "#2196f3"];
-
 const DesktopWasteComposition = () => {
-  const { displaySidebar } = useGlobalState();
+  const { displaySidebar, organicCount, recycleCount } = useGlobalState();
+
+  const data = [
+    { name: "Organic", value: organicCount },
+    { name: "Recycle", value: recycleCount },
+  ];
+
+  const COLORS = ["#4caf50", "#2196f3"];
   return (
     <div
       className={`${
