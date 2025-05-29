@@ -31,7 +31,10 @@ const DesktopRecyclableSection: React.FC = () => {
             </div>
           </div>
           <div className="w-full text-center text-black dark:text-white md:text-[3.4vw] lg:text-[1.5vw] font-medium font-['Roboto'] leading-[1.89vw]">
-            {recycleCount === 0 ? 0 : (recycleCount / totalCount) * 100}%
+            {recycleCount === 0
+              ? 0
+              : Math.round((recycleCount / totalCount) * 100)}
+            %
           </div>
         </div>
 
@@ -46,7 +49,10 @@ const DesktopRecyclableSection: React.FC = () => {
             </div>
           </div>
           <div className="w-full text-center text-black dark:text-white md:text-[3.4vw] lg:text-[1.5vw] font-medium font-['Roboto'] leading-[1.89vw]">
-            {organicCount === 0 ? 0 : (organicCount / totalCount) * 100}%
+            {organicCount === 0
+              ? 0
+              : Math.round((organicCount / totalCount) * 100)}
+            %
           </div>
         </div>
       </div>
