@@ -1,7 +1,10 @@
 // src/components/mobile/MobileWasteBreakdown.tsx
+import { useGlobalState } from "../../../context/useGlobalState";
+
 import MobileWasteBreakdownCard from "./MobileWasteBreakdownCard";
 
 const MobileWasteBreakdown: React.FC = () => {
+  const { totalCount, organicCount, recycleCount } = useGlobalState();
   return (
     <div className="self-stretch px-[3.33vw] flex flex-col justify-center items-center">
       <div className="self-stretch pt-[4.44vw] inline-flex justify-start items-center gap-[3.33vw]">
@@ -12,12 +15,16 @@ const MobileWasteBreakdown: React.FC = () => {
         </div>
       </div>
       {/* Contoh Recyclable */}
-      <MobileWasteBreakdownCard logo="🔄" title="Recyclable Waste" value={0} />
+      <MobileWasteBreakdownCard
+        logo="🔄"
+        title="Recyclable Waste"
+        value={(recycleCount / totalCount) * 100}
+      />
       {/* Contoh Non-Recyclable */}
       <MobileWasteBreakdownCard
         logo="⚠️"
         title="Non-Recyclable Waste"
-        value={0}
+        value={(organicCount / totalCount) * 100}
       />
     </div>
   );

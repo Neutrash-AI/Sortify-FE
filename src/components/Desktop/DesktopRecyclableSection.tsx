@@ -6,7 +6,8 @@ import { FaTrash } from "react-icons/fa";
 import { useGlobalState } from "../../context/useGlobalState";
 
 const DesktopRecyclableSection: React.FC = () => {
-  const { displaySidebar } = useGlobalState();
+  const { displaySidebar, totalCount, organicCount, recycleCount } =
+    useGlobalState();
   return (
     <div
       className={`${
@@ -30,7 +31,7 @@ const DesktopRecyclableSection: React.FC = () => {
             </div>
           </div>
           <div className="w-full text-center text-black dark:text-white md:text-[3.4vw] lg:text-[1.5vw] font-medium font-['Roboto'] leading-[1.89vw]">
-            {0}%
+            {(recycleCount / totalCount) * 100}%
           </div>
         </div>
 
@@ -45,7 +46,7 @@ const DesktopRecyclableSection: React.FC = () => {
             </div>
           </div>
           <div className="w-full text-center text-black dark:text-white md:text-[3.4vw] lg:text-[1.5vw] font-medium font-['Roboto'] leading-[1.89vw]">
-            {0}%
+            {(organicCount / totalCount) * 100}%
           </div>
         </div>
       </div>
