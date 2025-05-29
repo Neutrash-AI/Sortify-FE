@@ -10,14 +10,11 @@ import {
 import { useGlobalState } from "../../context/useGlobalState";
 
 const data = [
-  { name: "Plastic", value: 20 },
-  { name: "Paper", value: 20 },
-  { name: "Metal", value: 20 },
-  { name: "Glass", value: 30 },
-  { name: "Other", value: 10 },
+  { name: "Organic", value: 0 },
+  { name: "Recycle", value: 0 },
 ];
 
-const COLORS = ["#4caf50", "#2196f3", "#ff9800", "#9c27b0", "#f44336"];
+const COLORS = ["#4caf50", "#2196f3"];
 
 const DesktopWasteComposition = () => {
   const { displaySidebar } = useGlobalState();

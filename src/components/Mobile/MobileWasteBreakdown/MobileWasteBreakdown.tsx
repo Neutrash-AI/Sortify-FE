@@ -12,12 +12,12 @@ const MobileWasteBreakdown: React.FC = () => {
         </div>
       </div>
       {/* Contoh Recyclable */}
-      <MobileWasteBreakdownCard logo="🔄" title="Recyclable Waste" value={70} />
+      <MobileWasteBreakdownCard logo="🔄" title="Recyclable Waste" value={0} />
       {/* Contoh Non-Recyclable */}
       <MobileWasteBreakdownCard
         logo="⚠️"
         title="Non-Recyclable Waste"
-        value={30}
+        value={0}
       />
     </div>
   );

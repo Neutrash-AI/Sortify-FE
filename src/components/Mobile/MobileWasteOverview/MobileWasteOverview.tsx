@@ -15,14 +15,13 @@ const MobileWasteOverview: React.FC = () => {
           </div>
         </div>
       </div>
+      <MobileWasteListCard desc1="Total Waste" value1={0} />
       <MobileWasteListCard
-        desc1="Total Waste"
-        value1={5}
-        desc2="Plastic"
-        value2={1}
+        desc1="Organic"
+        value1={0}
+        desc2="Recycle"
+        value2={0}
       />
-      <MobileWasteListCard desc1="Paper" value1={1} desc2="Metal" value2={1} />
-      <MobileWasteListCard desc1="Glass" value1={2} desc2="Other" value2={0} />
     </div>
   );
 };

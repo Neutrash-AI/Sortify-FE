@@ -15,7 +15,7 @@ const DesktopRecyclableSection: React.FC = () => {
           : "md:-translate-x-[9vw] lg:-translate-x-[5vw]"
       } inline-flex flex-col justify-center items-center gap-[2.01vw]
         lg:w-[27.3vw] lg:absolute lg:left-[69.9vw] lg:top-[20.4vw]
-         md:w-[63.4vw] md:absolute md:left-[25.5vw] md:top-[109.8vw]
+         md:w-[63.4vw] md:absolute md:left-[25.5vw] md:top-[98vw]
          transform transition-transform duration-500 ease-in-out`}
     >
       <div className="w-full inline-flex justify-start items-center gap-[2.01vw]">
@@ -30,7 +30,7 @@ const DesktopRecyclableSection: React.FC = () => {
             </div>
           </div>
           <div className="w-full text-center text-black dark:text-white md:text-[3.4vw] lg:text-[1.5vw] font-medium font-['Roboto'] leading-[1.89vw]">
-            70%
+            {0}%
           </div>
         </div>
 
@@ -45,7 +45,7 @@ const DesktopRecyclableSection: React.FC = () => {
             </div>
           </div>
           <div className="w-full text-center text-black dark:text-white md:text-[3.4vw] lg:text-[1.5vw] font-medium font-['Roboto'] leading-[1.89vw]">
-            30%
+            {0}%
           </div>
         </div>
       </div>
