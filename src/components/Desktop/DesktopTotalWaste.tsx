@@ -3,7 +3,8 @@
 import { useGlobalState } from "../../context/useGlobalState";
 
 const DesktopTotalWaste: React.FC = () => {
-  const { displaySidebar } = useGlobalState();
+  const { displaySidebar, totalCount, organicCount, recycleCount } =
+    useGlobalState();
   return (
     <div
       className={`${
@@ -16,7 +17,11 @@ const DesktopTotalWaste: React.FC = () => {
        transform transition-transform duration-500 ease-in-out`}
     >
       <div className="w-[58vw] lg:inline-flex lg:justify-start lg:items-start lg:gap-[2vw] md:grid md:grid-cols-3 md:gap-[2.44vw]">
-        {["Total Waste", "Organic", "Recycle"].map((label, idx) => (
+        {[
+          { label: "Total Waste", count: totalCount },
+          { label: "Organic", count: organicCount },
+          { label: "Recycle", count: recycleCount },
+        ].map(({ label, count }, idx) => (
           <div
             key={idx}
             className="
@@ -29,7 +34,7 @@ const DesktopTotalWaste: React.FC = () => {
               {label}
             </div>
             <div className="relative text-black dark:text-white md:text-[3.4vw] lg:text-[1.47vw] font-medium font-['Roboto'] md:leading-[4.39vw] lg:leading-[1.89vw]">
-              {0}
+              {count}
             </div>
           </div>
         ))}
