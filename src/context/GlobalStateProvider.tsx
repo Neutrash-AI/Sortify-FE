@@ -55,19 +55,22 @@ export const GlobalStateProvider = ({ children }: GlobalStateProviderProps) => {
     socket.on(
       "camera_frames",
       (data: { detections?: { label: string; confidence: number }[] }) => {
-        const det = data.detections?.[0];
-        // only update if detection exists and confidence > 0.9
-        if (!det || det.confidence <= 0.9) return;
+      const det = data.detections?.[0];
+      // Skip if no detection exists
+      if (!det) return;
 
-        // increment total
+      // Different confidence thresholds based on label
+      if (det.label === "Organic" && det.confidence > 0.4) {
+      setTimeout(() => {
         setTotalCount((c) => c + 1);
-
-        // increment by label
-        if (det.label === "Organic") {
-          setOrganicCount((c) => c + 1);
-        } else if (det.label === "Recycle") {
-          setRecycleCount((c) => c + 1);
-        }
+        setOrganicCount((c) => c + 1);
+      }, 5000);
+      } else if (det.label === "Recycle" && det.confidence > 0.91) {
+      setTimeout(() => {
+        setTotalCount((c) => c + 1);
+        setRecycleCount((c) => c + 1);
+      }, 5000);
+      }
       }
     );
 
