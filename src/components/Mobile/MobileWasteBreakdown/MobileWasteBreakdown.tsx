@@ -18,13 +18,13 @@ const MobileWasteBreakdown: React.FC = () => {
       <MobileWasteBreakdownCard
         logo="🔄"
         title="Recyclable Waste"
-        value={(recycleCount / totalCount) * 100}
+        value={recycleCount === 0 ? 0 : (recycleCount / totalCount) * 100}
       />
       {/* Contoh Non-Recyclable */}
       <MobileWasteBreakdownCard
         logo="⚠️"
         title="Non-Recyclable Waste"
-        value={(organicCount / totalCount) * 100}
+        value={organicCount === 0 ? 0 : (organicCount / totalCount) * 100}
       />
     </div>
   );
